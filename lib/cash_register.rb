@@ -5,17 +5,17 @@ attr_accessor :total, :discount, :items
 def initialize(discount=0)
 @total = 0
 @discount = discount
-@array = []
+@items = []
 end
 
 def void_last_transaction
   if @quantity > 1
     @total = @total - (@price * @quantity)
       @quantity.times do
-        @array.pop
+        @items.pop
       end
   else
-    @array.pop
+    @items.pop
     @total = @total-@price
   end
 end
@@ -27,10 +27,10 @@ def add_item(title, price, quantity=1)
 @total = @total + (@price * @quantity)
     if @quantity > 1
         @quantity.times do
-        @array << @title
+        @items << @title
         end
     else
-    @array <<@title
+    @items <<@title
   end
 end
 
