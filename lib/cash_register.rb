@@ -36,9 +36,9 @@ end
 
 
 
-def items
-@array
-end
+#def items
+#@array
+#end
 
 def apply_discount
   if @discount == 0
